@@ -15,3 +15,26 @@ function sayHello() {
 }
 
 sayHello()
+
+
+//Objects
+//Objects are the collection of key/value pairs that can be modified throughout the lifecycle of an object as similar to hash map or dictionary. 
+
+const Person = {
+  //properties
+  name : 'sachin',
+  //methods
+  talk:function(){},
+  walk(){}
+}
+console.log(Person.name);
+
+const value = Person.talk();
+console.log(value);
+
+Person.name ="";
+
+const targetMember = 'name';
+Person[targetMember]='lokesh';
+
+console.log(Person.name);
