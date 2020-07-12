@@ -1,34 +1,26 @@
-// var -> function
-// let -> block
-// const -> block - readonly
-  // const x = 0;
-  // x = 2 ;
+const square_1 = function (numbers){
+  return numbers*numbers;
+};
+
+console.log(square_1(5));
 
 
-function sayHello() {
-  
-  for (var i = 0; i < 5; i++) {
-    console.log(i);
-  }
-  console.log(i);
-  
-}
+const square_2 = numbers => numbers * numbers;
 
-sayHello()
+console.log(square_2(5));
 
 
-//Objects
-//Objects are the collection of key/value pairs that can be modified throughout the lifecycle of an object as similar to hash map or dictionary. 
+const jobs = [
+  {id:1 , isActive:true},
+  {id:2 , isActive:false},
+  {id:3 , isActive:true},
+  {id:4 , isActive:false},
+]
 
-const Person = {
-  name : 'sachin',
-  walk(){
-    console.log(this);
-    
-  }
-}
-Person.walk()
+const activeJobs1 = jobs.filter(function(job){return  job.isActive; });
 
-const walk = Person.walk;
-walk();
-//window object
+console.log(activeJobs1);
+
+const activeJobs2 = jobs.filter(job => job.isActive);
+
+console.log(activeJobs2);
